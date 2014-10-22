@@ -289,7 +289,7 @@
 
             <section>
                <h4>Data binding</h4>
-               <img style="background:#fff" src="http://vojtajina.github.io/ng-slides/2011-09-23-web-expo/img/two-way-db.png" alt="" />
+               <img style="background:#fff;max-height:500px;" src="http://vojtajina.github.io/ng-slides/2011-09-23-web-expo/img/two-way-db.png" alt="" />
             </section>
 
             <section>
@@ -297,6 +297,79 @@
                <p>Using a directive:</p>
 
                <iframe width="100%" height="500" src="http://jsfiddle.net/adamturtle/pr0gnwhh/7/embedded/html,result/presentation" allowfullscreen="allowfullscreen" frameborder="0" style="background:#999"></iframe>
+            </section>
+
+            <section>
+            	<h2>Other directives/filters</h2>
+            	<div class="slide-left fragment" data-fragment-index="1">
+            		<h4>Directives</h4>
+            		<ul>
+            			<li>ngClick</li>
+            			<li>ngSubmit</li>
+            			<li>ngShow / ngHide</li>
+            			<li>ngClass<br>ngClassOdd<br>ngClassEven</li>
+            		</ul>
+            	</div>
+            	<div class="slide-right fragment" data-fragment-index="1">
+            		<h4>Filters</h4>
+            		<ul>
+            			<li>currency</li>
+            			<li>date</li>
+            			<li>limitTo</li>
+            			<li>json</li>
+            		</ul>
+            	</div>
+            	<br>
+            	<br>
+            	<p class="fragment">Of course, define your own directives and filters</p>
+            </section>
+
+            <section>
+            	<h1>MVC</h1>
+            	<p>Models ↔ Views ↔ Controllers</p>
+            	<p>Connecting the parts together</p>
+            </section>
+
+            <section>
+            	<h1>$scope</h1>
+
+            	<p>$scope is the glue between the <br>application controller and the view.</p>
+
+            	<h3 class="fragment">view&nbsp;&nbsp;↔&nbsp;&nbsp;$scope&nbsp;&nbsp;↔&nbsp;&nbsp;controller</h3>
+
+            	<aside class="notes">
+            		<ul>
+            			<li>Also known as "view model".</li>
+            			<li>Views and controllers don't need to know about each other</li>
+            		</ul>
+            	</aside>
+            </section>
+
+            <section>
+            	<h4>$scope</h4>
+            	<iframe width="100%" height="500" src="http://jsfiddle.net/adamturtle/cntvz6vd/4/embedded/html,js,result/presentation" allowfullscreen="allowfullscreen" frameborder="0" style="background:#999"></iframe>
+            </section>
+
+            <section>
+            	<h1>Modules</h1>
+            	<p>Reusable containers for different features of your app.</p>
+            </section>
+
+            <section>
+            	<h4>Modules</h4>
+            	<p>Anatomy of a module</p>
+            	<ul>
+            		<li>Controllers</li>
+            		<li>Services</li>
+            		<li>Filters</li>
+            		<li>Directives</li>
+            	</ul>
+            </section>
+
+            <section>
+            	<h2>Creating a module</h2>
+            	<iframe width="100%" height="500" src="http://jsfiddle.net/adamturtle/fjg4L80c/1/embedded/html,js,result/presentation" allowfullscreen="allowfullscreen" frameborder="0" style="background:#999"></iframe>
+
             </section>
 
 
