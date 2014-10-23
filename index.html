@@ -405,6 +405,81 @@
             	<p>Easy deep linking in single-page apps.</p>
             </section>
 
+            <section>
+               <h3>Routing</h3>
+               <pre><code class="js"  style="height:600px">
+angular.module('myApp', ['ngRoute'])
+.config(function ($routeProvider) {
+    $routeProvider
+      .when('/', {
+        template: 'partials/home.html',
+      })
+      .when('/about', {
+        template: 'partials/about.html',
+      })
+      .when('/contact', {
+          template: 'contact.html',
+          controller: 'contactCtrl'
+      })
+      .otherwise({
+        redirectTo: '/'
+      });
+})
+.controller('contactCtrl', function($scope) {
+   $scope.email = 'nicolas@cage.com';
+    ...
+});
+               </code></pre>
+            </section>
+
+            <section>
+               <h1>Putting it all together</h1>
+               <p class="fragment">Turtle's amazing first Angular app</p>
+               <a class="fragment" target="_blank" href="http://turtles-angular-app.herokuapp.com/"><img src="http://adamturtle.s3.amazonaws.com/finger.png" alt="" class="no-shadow" /></a>
+               <p class="fragment"><a href="https://github.com/adamturtle/ExampleAngularApp" target="_blank">https://github.com/adamturtle/ExampleAngularApp</a></p><!-- /.fragment -->
+            </section>
+
+            <section>
+               <h2>Final Thoughts</h2>
+               <br />
+               <div class="slide-left">
+                  <ul class="no-style">
+                     <li class="fragment">&#9746; It's not for <em>every</em> project.</li><!-- /.fragment -->
+                     <li class="fragment">&#9746;Learning curve</li><!-- /.fragment -->
+                  </ul>
+               </div><!-- /.slide-left -->
+               <div class="slide-right">
+                  <ul class="no-style">
+                     <li class="fragment">&#9745;Promotes better code structure</li><!-- /.fragment -->
+                     <li class="fragment">&#9745;Easier for other devs in team</li><!-- /.fragment -->
+                     <li class="fragment">&#9745;May be better for SEO</li><!-- /.fragment -->
+                  </ul>
+               </div><!-- /.slide-right -->
+            </section>
+
+            <section>
+               <h3>Further reading</h3>
+               <br />
+               <ul>
+                  <li>
+                     <a href="https://docs.angularjs.org/api/" target="_blank">Angular Docs</a>
+                  </li>
+                  <li>
+                     <a href="http://angular-ui.github.io/bootstrap/" target="_blank">
+                        UI Bootstrap
+                     </a>
+                  </li>
+                  <li><a href="http://todomvc.com/" target="_blank">Todo MVC</a></li>
+               </ul>
+            </section>
+
+            <section>
+               <h1>Thanks</h1>
+               <h6>for not falling asleep</h6>
+
+               <img class="no-shadow" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAPCAYAAADzun+cAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjNFRkYwQjgyNTJCMDExRTQ5RDREQTE1NkJCNDkyNDVFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjNFRkYwQjgzNTJCMDExRTQ5RDREQTE1NkJCNDkyNDVFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6REY5NDdDN0Y1MjRDMTFFNDlENERBMTU2QkI0OTI0NUUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6REY5NDdDODA1MjRDMTFFNDlENERBMTU2QkI0OTI0NUUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4LXF0TAAAByElEQVR42qSVSyhEURiAZ8ajPCbsTBaKxNazPBsWNjbKJOUxZKGo2Sk7CitFSYxEs1IMSwtiRZSUR2GYLCjGhg3FDAvfqX9xTTPuHfevr3PuOXfO9597HmN1+1MsBqIOWqEaCuAbnuAY1nyuyIElwbDqiNNgCTp1xlmHYRJ4MCq2/dGXLjPqNDBOO1z0bqS2xXuBvmywG5nxHjRZEo9Z2IIHvkBACalPgQuSYBs88Wbs/qdUhUcG70CqluoKuqAFLiUBbyyxymrGYj680AMOOGL2h5RB6Xu3xck4x6R0BdEz5Zg8NzL7MGW3PI/HEo+alAaR9iOao56raU+FT1hQa58ctYunIcuEVK1nJVJ1EoY0bbuwKUmFVKNWPAkDJqQ+Bu2To6M+sxNCtN3GelkrnoATkdfqnHFtnMEIgm2E89TPqS/q/UiJM2AQ6mEZGiBfNlgNlEMp5IFdElIzOgU/klWENrjmuQRuwJC4Sm4edYyaYQfupX1PrswvkWaqSwdeIKwZxyFSFcUkUURCQb0rc19tCCiTDfEBFXL/BiAChfCm1kz+HMK/FtcVeaS40zQ5jcz4O07fqySWIjPVPUayPMlReydm/AgwAAwvgppRXA53AAAAAElFTkSuQmCC" align="center" alt="" />
+            </section>
+
 			</div>
 
 		</div>

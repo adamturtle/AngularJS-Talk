@@ -32,6 +32,10 @@
    font-weight: 100;
 }
 
+.reveal a:not(.image) {
+   color: #b43137;
+}
+
 .reveal p,
 .reveal li,
 .reveal blockquote p {
@@ -112,6 +116,26 @@ pre {
    white-space: -o-pre-wrap;    /* Opera 7 */
    word-wrap: break-word;       /* Internet Explorer 5.5+ */
    line-height: 150% !important;
+}
+
+.reveal .no-shadow {
+   -webkit-box-shadow: none;
+   box-shadow: none;
+   margin-left: 0;
+   -webkit-transition: .15s margin;
+   -o-transition: .15s margin;
+   transition: .15s margin;
+}
+
+.reveal a:hover .no-shadow {
+   -webkit-box-shadow: none;
+   box-shadow: none;
+   margin-left: 20px;
+}
+
+.reveal .no-style {
+   padding: 0;
+   list-style: none;
 }
 
 
