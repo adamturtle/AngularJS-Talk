@@ -5,7 +5,6 @@
   "homepage": "http://lab.hakim.se/reveal-js",
   "subdomain": "revealjs",
   "scripts": {
-    "test": "grunt test",
     "start": "node server.js"
   },
   "author": {
