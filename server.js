@@ -1,9 +1,9 @@
-var express = require('express')
+var express = require('express');
 var app = express();
+var port = process.env.PORT || 5000;
 
-app.set('port', (process.env.PORT || 5000))
-app.use(express.static(__dirname + '/'))
-
-app.listen(app.get('port'), function() {
-  console.log("Node app is running at localhost:" + app.get('port'))
-})
+app.use(express.logger());
+app.use('/', express.static(__dirname));
+app.listen(port, function() {
+  console.log('Server started on ' + port);
+});
